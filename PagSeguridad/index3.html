@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Estilo/estilo.css">
+  <title>Teoría de Seguridad</title>
+</head>
+<body>
+  <header>
+    <h1>Seguridad y Calidad en Aplicaciones Web</h1>
+    <nav>
+      <a href="index.html"><button>Teoría</button></a>
+      <a href="index2.html"><button>Parcial</button></a>
+      <a href="index3.html"><button>Practica</button></a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>40 MC - Segunda Parte</h2>
+    <div id="mc-content"></div>
+  </main>
+
+ <script>
+  const archivos = [
+    "40 MC 2da parte.txt",
+    "40 MC SEG.txt",
+    "gpt 40 seguridad.txt"
+  ];
+
+  const contenedor = document.getElementById('mc-content');
+
+  archivos.forEach(nombre => {
+    fetch(`./PracticaConChatGPT/${nombre}`)
+      .then(response => response.text())
+      .then(texto => {
+        const seccion = document.createElement("section");
+        seccion.innerHTML = `<h3>${nombre}</h3>${texto}`;
+        contenedor.appendChild(seccion);
+      })
+      .catch(error => {
+        const errorMsg = document.createElement("p");
+        errorMsg.textContent = `Error al cargar: ${nombre}`;
+        contenedor.appendChild(errorMsg);
+      });
+  });
+</script>
+</body>
+</html>
