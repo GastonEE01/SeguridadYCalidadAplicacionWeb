@@ -1,30 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Estilo/estilo.css">
-    <title>Parcial - Seguridad</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seguridad y calidad de aplicacion web</title>
+  <link rel="stylesheet" href="./Estilo/Estilo.css" />
+
 </head>
 <body>
-    <header>
-        <h1>Seguridad y Calidad en Aplicaciones Web</h1>
-        <nav>
-            <a href="index.html"><button>Teoría</button></a>
-            <a href="index2.html"><button>Parcial</button></a>
-        </nav>
-    </header>
+  <header>
+    <h1>Seguridad y calidad de aplicacion web</h1>
+  </header>
 
-    <main>
-        <h2>Parcial 1</h2>
-        <iframe src="./Parciales/1ER PARCIAL corregido.pdf" width="90%" height="500px" frameborder="0"></iframe>
-    
-        <h2>Parcial 2 y un recuperatorio</h2>
-        <iframe src="./Parciales/2do parcial y recuperatorio - SCAW.docx.pdf" width="90%" height="500px" frameborder="0"></iframe>
-    
-        <h2>Parcial 2</h2>
-        <iframe src="./Parciales/Respuestas2erParcial.pdf" width="90%" height="500px" frameborder="0"></iframe>
-    
-    </main>
+  <div class="botonera">
+    <a href="index.html"><button>Resumenes</button></a>
+    <a href="index2.html"><button>Parciales</button></a>
+    <a href="index3.html"><button>Practica</button></a>
+
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <button class="clase-button" onclick="PdfPrimerParcial()">Primer parcial</button>
+      <button class="clase-button" onclick="PdfSegundoParcial()">Segundo parcial</button>
+    </div>
+
+    <!-- Este es el contenedor que mostrará el PDF en el centro -->
+    <div id="pdf-container" class="pdfviewer" width="100% height="100%">
+      <!-- Aquí se cargan los PDFs dinámicamente -->
+    </div>
+  </div>
+
+  
+  <script>
+
+function PdfPrimerParcial() {
+  document.getElementById("pdf-container").innerHTML = `
+    <iframe 
+      src="https://drive.google.com/file/d/1A9TdpWlL4vP8tDcc_BnlzyjSbeEMufmq/preview" 
+      width="99.5%" 
+      height="100%" 
+      allow="autoplay">
+    </iframe>
+    <br /> <br />
+  `;
+}
+
+function PdfSegundoParcial() {
+  document.getElementById("pdf-container").innerHTML = `
+    <iframe 
+      src="https://drive.google.com/file/d/1th5UoK-EEo_LY5stXbFaRwYYHB1gCKLb/preview" 
+      width="99.5%" 
+      height="100%" 
+      allow="autoplay">
+    </iframe>
+    <br /> <br />
+  <iframe 
+      src="https://drive.google.com/file/d/1lrwTqON1OCu5VaveDEZkJbpHb5Ebzb1w/preview" 
+      width="99.5%" 
+      height="100%" 
+      allow="autoplay">
+    </iframe>
+    <br /> <br />
+     
+  `;
+}
+
+
+</script>
+ 
 </body>
 </html>

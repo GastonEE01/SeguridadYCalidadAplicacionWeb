@@ -1,49 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Estilo/estilo.css">
-    <title>Teoría de Seguridad</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seguridad y calidad de aplicacion web</title>
+  <link rel="stylesheet" href="./Estilo/Estilo.css" />
+
 </head>
 <body>
-    <header>
-        <h1>Seguridad y Calidad en Aplicaciones Web</h1>
-        <nav>
-            <a href="index.html"><button>Teoría</button></a>
-            <a href="index2.html"><button>Parcial</button></a>
-            <a href="index3.html"><button>Practica</button></a>
-        </nav>
-    </header>
+  <header>
+    <h1>Seguridad y calidad de aplicacion web</h1>
+  </header>
 
-<body>
-    <main>
+  <div class="botonera">
+    <a href="index.html"><button>Resumenes</button></a>
+    <a href="index2.html"><button>Parciales</button></a>
+    <a href="index3.html"><button>Practica</button></a>
 
-    <h2>Anexo de comprobadores de integridad</h2>
-    <iframe src="./Resumenes/Unidad N° 1_ Introducción a la Seguridad.pdf" width="90%" height="500px" frameborder="0"></iframe>
+  </div>
 
-    <h2>Anexo 1 Seguridad-Lucena 2.6</h2>
-    <iframe src="./Resumenes/seguridad.docx.pdf" width="90%" height="500px" frameborder="0"></iframe>
+  <div class="container">
+    <div class="sidebar">
+      <button class="clase-button" onclick="PdfUnidad1()">Unidad 1</button>
+      <button class="clase-button" onclick="PdfUnidad2()">Unidad 2</button>
+      <button class="clase-button" onclick="PdfUnidad3()">Unidad 3</button>
+      <button class="clase-button" onclick="PdfUnidad4()">Unidad 4</button>
+      <button class="clase-button" onclick="PdfUnidad5()">Unidad 5</button>
+      <button class="clase-button" onclick="PdfUnidad6()">Unidad 6</button>
 
-    <h2>Introduccion a la Seguridad </h2>
-    <iframe src="./Resumenes/Introduccion a la seguridad 2.pdf" width="90%" height="500px" frameborder="0"></iframe>
+    </div>
 
-    <h2>Fin de la unidad 1</h2>
+    <!-- Este es el contenedor que mostrará el PDF en el centro -->
+    <div id="pdf-container" class="pdfviewer" width="100% height="100%">
+      <!-- Aquí se cargan los PDFs dinámicamente -->
+    </div>
+  </div>
 
-    <h2>Unidad 2</h2>
-    <h2>Amenaza a la seguridad</h2>
-    <iframe src="./Resumenes/Unidad N° 2_ Amenazas a la Seguridad.pdf" width="90%" height="500px" frameborder="0"></iframe>
+  
+  <script>
 
-    <h2>Proteccion a la informacion</h2>
-    <iframe src="./Resumenes/Anexo 2 Proteccion-de-la-informacion resumen.pdf" width="90%" height="500px" frameborder="0"></iframe>
+function PdfUnidad1() {
+  document.getElementById("pdf-container").innerHTML = `
+    <iframe 
+      src="https://drive.google.com/file/d/1PidIDfmQ5giC4A3P2VXwNKUWiYYTRX0b/preview" 
+      width="99.5%" 
+      height="100%" 
+      allow="autoplay">
+    </iframe>
+    <br /> <br />
+     <iframe 
+      src="https://drive.google.com/file/d/1O_zDrlc3VDoYoNNMB1lYNOIYqjZB9e71/preview" 
+      width="99.5%" 
+      height="100%" 
+      allow="autoplay">
+    </iframe>
+      <br /> <br />
+     <iframe 
+      src="https://drive.google.com/file/d/1bNzqy1PdkWbXmtjnKA1vbN4msjScmcJR/preview" 
+      width="99.5%" 
+      height="100%" 
+      allow="autoplay">
+    </iframe>
+  `;
+}
 
-    <h2>distribute-ProactiveControls_v4_2024</h2>
-    <iframe src="./Resumenes/distribute-ProactiveControls_v4_2024.pdf" width="90%" height="500px" frameborder="0"></iframe>
+function PdfUnidad2() {
+  document.getElementById("pdf-container").innerHTML = `
+    <iframe 
+      src="https://drive.google.com/file/d/19CvUcDAQEr9kEPtEPXzq-8yHNHGxIzR3/preview" 
+      width="99.5%" 
+      height="100%" 
+      allow="autoplay">
+    </iframe>
+    <br /> <br />
+  <iframe 
+      src="https://drive.google.com/file/d/17UDqjE_Fv37X1FXGgBHWRlsO4q9M6x0H/preview" 
+      width="99.5%" 
+      height="100%" 
+      allow="autoplay">
+    </iframe>
+    <br /> <br />
+      <iframe 
+      src="https://drive.google.com/file/d/1T-FjJ7v5Sx-AtxQb_W0sSX8fqx3FpDqP/preview" 
+      width="99.5%" 
+      height="100%" 
+      allow="autoplay">
+    </iframe>
+    <br /> <br />
+      <iframe 
+      src="https://drive.google.com/file/d/18aKWvRtYU7Q8aLcl-CM6D8mc4PwbsxuJ/preview" 
+      width="99.5%" 
+      height="100%" 
+      allow="autoplay">
+    </iframe>
+  `;
+}
 
-    
-    <h2>Anexo 2 TopTen 2021</h2>
-    <iframe src="./Resumenes/OWASP_Top_10_2021.docx.pdf" width="90%" height="500px" frameborder="0"></iframe>
 
-    </main>
+</script>
+ 
 </body>
 </html>
